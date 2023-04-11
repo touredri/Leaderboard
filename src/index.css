@@ -1,74 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,500;1,500&family=Lato:wght@400;900&family=Pathway+Gothic+One&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Chivo Mono', 'Lato', 'Pathway Gothic One',
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Chivo Mono', 'Lato', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 main {
-    display: flex;
-    gap: 60px;
-    padding: 60px;
+  display: flex;
+  gap: 60px;
+  padding: 60px;
 }
 
 .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    /* background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+
+  /* background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    height: 200px;
+  height: 200px;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
 
 button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    background-color: #ddd6d6;
-    color: #0f0f0f;
-    font-weight: 900;
-    cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #ddd6d6;
+  color: #0f0f0f;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 ul {
-    list-style: none;
-    border: 1px solid #0f0f0f;
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    margin-top: 17px;
+  list-style: none;
+  border: 1px solid #0f0f0f;
+  border-radius: 10px;
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 17px;
 }
