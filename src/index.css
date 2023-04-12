@@ -108,16 +108,11 @@ li {
   }
 
   ul {
-    height: 200px;
+    max-height: 200px;
     overflow-y: scroll;
   }
 
   ul.recent-scores {
     padding: 5px;
   }
-}
-
-li {
-  padding-bottom: 5px;
-  font-size: 27px;
 }
