@@ -1,15 +1,15 @@
 import './index.css';
+import { getScore } from './api.js';
 
 export const list = document.querySelector('.recent-scores');
-
-export const alllist = [];
-
-window.onload = () => {
-  const data = JSON.parse(localStorage.getItem('list'));
-  if (data) {
+export const display = async () => {
+  const storedId = localStorage.getItem('id');
+  if (storedId) {
+    const data = await getScore(storedId);
+    list.innerHTML = '';
     data.forEach((element) => {
       const li = document.createElement('li');
-      li.innerHTML = `${element.name}: ${element.score}`;
+      li.innerHTML = `${element.user}: ${element.score}`;
       list.appendChild(li);
     });
   }

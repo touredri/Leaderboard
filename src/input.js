@@ -1,19 +1,21 @@
 import './index.css';
-import { list } from './list.js';
+import { newGame, saveScore } from './api.js';
 
 export const form = document.querySelector('.right');
+let id;
+export const getId = async () => {
+  const storedId = localStorage.getItem('id');
+  if (storedId) {
+    id = storedId;
+  } else {
+    id = await newGame('My game');
+    localStorage.setItem('id', id);
+  }
+};
 
-export const addScrore = () => {
+export const addScrore = async () => {
   const name = document.querySelector('.name').value;
   const score = document.querySelector('.score').value;
-  const li = document.createElement('li');
-  li.innerHTML = `${name}: ${score}`;
-  list.appendChild(li);
-  const object = {
-    name,
-    score,
-  };
-  const alllist = JSON.parse(localStorage.getItem('list')) || [];
-  alllist.push(object);
-  localStorage.setItem('list', JSON.stringify(alllist));
+  await getId();
+  saveScore(id, name, score);
 };

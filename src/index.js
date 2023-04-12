@@ -1,5 +1,6 @@
 import './index.css';
 import { form, addScrore } from './input.js';
+import { display } from './list.js';
 
 form.innerHTML = `<h2>Add your score</h2>
 <form>
@@ -13,4 +14,9 @@ add.addEventListener('submit', (e) => {
   e.preventDefault();
   addScrore();
   add.reset();
+});
+
+const refresh = document.querySelector('.refresh');
+refresh.addEventListener('click', () => {
+  display();
 });
