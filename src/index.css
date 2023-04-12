@@ -74,3 +74,32 @@ ul {
   padding: 10px;
   margin-top: 17px;
 }
+
+li {
+  padding-bottom: 5px;
+  font-size: 27px;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    max-width: 400px;
+  }
+
+  ul {
+    height: 200px;
+    overflow-y: scroll;
+  }
+
+  ul.recent-scores {
+    padding: 5px;
+  }
+}
